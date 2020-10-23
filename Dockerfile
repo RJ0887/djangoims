@@ -7,8 +7,8 @@ COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY manage.py ./
-#RUN python manage.py makemigrations
-#RUN python manage.py migrate
+RUN python manage.py makemigrations
+RUN python manage.py migrate
 
 COPY . .
 
