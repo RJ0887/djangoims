@@ -14,8 +14,7 @@ COPY . .
 
 EXPOSE 8000
 STOPSIGNAL SIGINT
+
 ENTRYPOINT ["python", "manage.py"]
-CMD ["makemigrations"]
-CMD ["migrate"]
 CMD ["runserver", "0.0.0.0:8000"]
 
